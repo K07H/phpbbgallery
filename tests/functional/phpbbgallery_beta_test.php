@@ -2110,7 +2110,7 @@ class phpbbgallery_beta_test extends phpbbgallery_base
 		$crawler = self::request('GET', 'adm/index.php?i=-phpbbgallery-core-acp-config_module&mode=main&sid=' . $this->sid);
 		$form = $crawler->selectButton('submit')->form();
 		$form->setValues(array(
-			'rrc_gindex_comments'	=> $options,
+			'config[rrc_gindex_comments]'	=> $options,
 		));
 		$crawler = self::submit($form);
 		// Should be updated
@@ -2253,7 +2253,7 @@ class phpbbgallery_beta_test extends phpbbgallery_base
 		$crawler = self::request('GET', 'adm/index.php?i=-phpbbgallery-core-acp-config_module&mode=main&sid=' . $this->sid);
 		$form = $crawler->selectButton('submit')->form();
 		$form->setValues(array(
-			'config[rrc_gindex_mode]'	=> $options,
+			'rrc_gindex_mode'	=> $options,
 		));
 		$crawler = self::submit($form);
 		// Should be updated
