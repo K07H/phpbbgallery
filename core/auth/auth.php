@@ -493,6 +493,7 @@ class auth
 	*/
 	public function set_user_permissions($user_ids, $permissions = false)
 	{
+		var_dump($permissions);
 		$sql_set = (is_array($permissions)) ? $this->db->sql_escape($this->serialize_auth_data($permissions)) : '';
 		$sql_where = '';
 		if (is_array($user_ids))
