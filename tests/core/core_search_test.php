@@ -21,7 +21,6 @@ class core_search_test extends core_base
 {
 	public function setUp()
 	{
-		global $auth;
 		parent::setUp();
 		$this->gallery_config = new \phpbbgallery\core\config(
 			$this->config
@@ -66,11 +65,6 @@ class core_search_test extends core_base
 			->getMock();
 		$this->gallery_image->method('get_status_orphan')
 			->willReturn(3);
-
-			
-		$this->auth->method('get_acl')
-			->willReturn(true);
-		$auth = $this->auth;
 
 		// Let's build Search
 		$this->gallery_search = new \phpbbgallery\core\search(
