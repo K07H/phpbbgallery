@@ -13,7 +13,7 @@
 
 namespace phpbbgallery\tests\core;
 /**
-* @group core
+* @group core1
 */
 require_once dirname(__FILE__) . '/../../../../includes/functions.php';
 
